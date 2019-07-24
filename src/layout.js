@@ -1,21 +1,21 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
 
-import Dashboard from './Container/Dashboard';
-import Employee from './Container/Employee';
-import FeedbackForm from './Container/FeedbackForm';
-import Feedbacks from './Container/Feedbacks';
-import Customers from './Container/Customers';
-import AskFeedback from './Container/AskFeedback';
-import Stores from './Container/Stores';
-import ExportData from './Container/ExportData';
-import Report from './Container/Report';
-import Campaign from './Container/Campaign';
-import PromotionalSms from './Container/PromotionalSms';
-import LoyaltyProgram from './Container/LoyaltyProgram';
-import ReferallProgram from './Container/ReferallProgram';
-import VoucherProgram from './Container/VoucherProgram';
-import Testimonial from './Container/Testimonial';
+import Dashboard from './Container/View/Dashboard';
+import Employee from './Container/View/Employee';
+import FeedbackForm from './Container/View/FeedbackForm';
+import Feedbacks from './Container/View/Feedbacks';
+import Customers from './Container/View/Customers';
+import AskFeedback from './Container/View/AskFeedback';
+import Stores from './Container/View/Stores';
+import ExportData from './Container/View/ExportData';
+import Report from './Container/View/Report';
+import Campaign from './Container/View/Campaign';
+import PromotionalSms from './Container/View/PromotionalSms';
+import LoyaltyProgram from './Container/View/LoyaltyProgram';
+import ReferallProgram from './Container/View/ReferallProgram';
+import VoucherProgram from './Container/View/VoucherProgram';
+import Testimonial from './Container/View/Testimonial';
 
 
 

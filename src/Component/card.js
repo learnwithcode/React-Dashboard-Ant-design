@@ -1,17 +1,23 @@
 import React from 'react';
-import { Card } from 'antd';
+import { Card} from 'antd';
+
 
 const gridStyle = {
-  width: '25%',
-  textAlign: 'center',
+  width: '100%',
+  marginBottom: '18px'  
 };
 
 
 const card = (props) => {
     return (
-        <Card.Grid style={gridStyle}>{props.children}</Card.Grid>
+          <Card.Grid style={gridStyle}>
+            {props.children}
+          </Card.Grid>
     )
 };
 
 
 export default card;
+
+
+
