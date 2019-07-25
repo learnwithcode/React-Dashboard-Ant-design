@@ -1,6 +1,14 @@
 import React from 'react';
 import { withRouter } from 'react-router';
-import Skeleton from '../../Component/skeleton';
+import Spinner from '../../Component/spinner';
+
+const style = {
+    position : 'absolute',
+    top : '50%',
+    left : '50%',
+    transform : 'translate(-50%, -50%)',
+    
+}
 
 export default WrappedComponent => {
     class Wrapper extends React.Component {
@@ -19,17 +27,14 @@ export default WrappedComponent => {
     
         timer = () => this.setState({ isLoading: false}, () => this.clearTimer());
     
-        setTimer = () => (this.timeout = setTimeout(this.timer, 600))
+        setTimer = () => (this.timeout = setTimeout(this.timer, 700))
         
         render = () => (
             <div>
             {this.state.isLoading
-            ?<div>
-                <Skeleton/>
-                <Skeleton/>
-                <Skeleton/>
-                <Skeleton/>
-                <Skeleton/>   
+            ?<div style={style}>
+               
+                <Spinner/>   
             </div>
             : <WrappedComponent {...this.props} />}
             </div>

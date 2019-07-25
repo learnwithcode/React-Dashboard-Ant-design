@@ -167,7 +167,7 @@ class layout extends React.Component {
                     </Sider>
                 
                     <Layout style={{ padding: '24px 24px' }}>
-                        <Content style={{ background: '#fff', padding: 24, margin: 0,minHeight: 280,}}>
+                        <Content style={{ background: '#fff', padding: 24, margin: 0,minHeight: 280,position : 'relative'}}>
 
                         <Switch>
                             <Route path="/" exact component={Wrapper(Dashboard)}/>  
