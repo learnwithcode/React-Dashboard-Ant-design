@@ -1,5 +1,7 @@
 import React from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Switch, Route, Link } from 'react-router-dom';
+import Wrapper from './Container/HOC/Wrapper';
+
 
 import Dashboard from './Container/View/Dashboard';
 import Employee from './Container/View/Employee';
@@ -167,23 +169,23 @@ class layout extends React.Component {
                     <Layout style={{ padding: '24px 24px' }}>
                         <Content style={{ background: '#fff', padding: 24, margin: 0,minHeight: 280,}}>
 
-                        
-                        <Route path="/" exact component={Dashboard}/>  
-                        <Route path="/employee/" exact component={Employee}/> 
-                        <Route path="/feedback-form/" exact component={FeedbackForm}/> 
-                        <Route path="/feedbacks/" exact component={Feedbacks}/> 
-                        <Route path="/customers/" exact component={Customers}/> 
-                        <Route path="/ask-feedback/" exact component={AskFeedback}/>
-                        <Route path="/stores/" exact component={Stores}/> 
-                        <Route path="/export-data/" exact component={ExportData}/> 
-                        <Route path="/report/" exact component={Report}/> 
-                        <Route path="/campaign/" exact component={Campaign}/> 
-                        <Route path="/promotional-sms/" exact component={PromotionalSms}/> 
-                        <Route path="/loyalty-program/" exact component={LoyaltyProgram}/> 
-                        <Route path="/referall-program/" exact component={ReferallProgram}/> 
-                        <Route path="/voucher-program/" exact component={VoucherProgram}/> 
-                        <Route path="/testimonial/" exact component={Testimonial}/> 
-
+                        <Switch>
+                            <Route path="/" exact component={Wrapper(Dashboard)}/>  
+                            <Route path="/employee/" exact component={Wrapper(Employee)}/> 
+                            <Route path="/feedback-form/" exact component={Wrapper(FeedbackForm)}/> 
+                            <Route path="/feedbacks/" exact component={Wrapper(Feedbacks)}/> 
+                            <Route path="/customers/" exact component={Wrapper(Customers)}/> 
+                            <Route path="/ask-feedback/" exact component={Wrapper(AskFeedback)}/>
+                            <Route path="/stores/" exact component={Wrapper(Stores)}/> 
+                            <Route path="/export-data/" exact component={Wrapper(ExportData)}/> 
+                            <Route path="/report/" exact component={Wrapper(Report)}/> 
+                            <Route path="/campaign/" exact component={Wrapper(Campaign)}/> 
+                            <Route path="/promotional-sms/" exact component={Wrapper(PromotionalSms)}/> 
+                            <Route path="/loyalty-program/" exact component={Wrapper(LoyaltyProgram)}/> 
+                            <Route path="/referall-program/" exact component={Wrapper(ReferallProgram)}/> 
+                            <Route path="/voucher-program/" exact component={Wrapper(VoucherProgram)}/> 
+                            <Route path="/testimonial/" exact component={Wrapper(Testimonial)}/> 
+                        </Switch>
                         </Content>
                         <Footer style={{ textAlign: 'center' }}>FellaFeeds ©2018</Footer>
                     </Layout>

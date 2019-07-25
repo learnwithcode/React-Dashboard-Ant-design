@@ -3,6 +3,7 @@ import Card from '../../Component/card';
 import {Row, Col } from 'antd';
 import Chart from '../Library/Chart';
 import Empty from '../../Component/empty';
+import Skeleton from '../../Component/skeleton';
 
 import {Statistic, Tag, Icon } from 'antd';
 
@@ -85,27 +86,6 @@ class Dashboard extends React.Component {
 
 
 
-                <Row gutter={10}>
-                    <Col  span={12}>
-                        <Card>
-                            <h1 style={fontSize}>Feedback Categories</h1>
-                            <Empty/>
-                            
-                        </Card>
-                        
-                    </Col>
-
-                    <Col  span={12}>
-                        <Card>
-                            <h1 style={fontSize}>Feedback Categories</h1>
-                            <Empty/>
-                            
-                        </Card>
-                        
-                    </Col>
-                </Row>
-
-
 
                 <Row gutter={10}>
                     <Col  span={12}>
@@ -126,6 +106,27 @@ class Dashboard extends React.Component {
                 <Row gutter={10}>
                     <Col  span={12}>
                         <Card>
+                            <h1 style={fontSize}>Feedback Categories</h1>
+                            <Skeleton/>
+                            
+                        </Card>
+                        
+                    </Col>
+
+                    <Col  span={12}>
+                        <Card>
+                            <h1 style={fontSize}>Feedback Categories</h1>
+                            <Empty/>
+                            
+                        </Card>
+                        
+                    </Col>
+                </Row>
+
+
+                <Row gutter={10}>
+                    <Col  span={12}>
+                        <Card>
                             <h1 style={fontSize}>Latest Feedbacks</h1>
                             <Chart/>
                         </Card>
@@ -139,16 +140,14 @@ class Dashboard extends React.Component {
                     </Col>
                 </Row>
 
-
                 <Row gutter={10}>
                     <Col  span={24}>
                         <Card>
                             <h1 style={fontSize}>Question Categories</h1>
-                            <Empty/>
+                            <Skeleton/>
                         </Card>
                     </Col>
-                </Row>
-             
+                </Row>                
             </div>
         )
     }
